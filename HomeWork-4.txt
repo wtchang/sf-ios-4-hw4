@@ -1,0 +1,30 @@
+HW4 - Movie Detail View Controller
+
+You're going to recycle the random movie view controller and its outlets into a detail movie view controller. Then in prepareForSegue of the MovieListTableViewController, you're going to give the MovieDetailViewController the information it needs. The prepareForSegue part of this is intentionally left a little vague. I want to see what kind of creative ways you find out which movie was tapped on and how you transfer that information to the MovieDetailViewController.
+
+It needs at least the following information:
+
+var titleString: String?
+var directorString: String?
+var descriptionString: String?
+var moviePosterURL: NSURL?
+
+Then once the detail view controller has that information, it can populate its IBOutlets with that data in viewDidLoad.
+
+A rough outline of the steps you should follow are:
+
+1) Rename the RandomMovieViewController.swift file to MovieDetailViewController.swift. Also remember to rename the class to MovieDetailViewController
+
+2) In the storyboard, change the class of the RandomMovieViewController interface to MovieDetailViewController in the Identity Inspector
+
+3) In the RandomMovieViewController, remove all the code for downloading the movies, the helper functions at the bottom for getting the movie information, and also remove the var movies: [NSDictionary] variable
+
+***** Note that steps 1 through 3 could be skipped and you could just delete the RandomMovieViewController.swift file and from the storyboard and just create a new ViewController in the storyboard and matchin swift file... up to you ****
+
+4) In the storyboard, create a Show segue from the prototype cell to the MovieDetailViewController
+
+5) In the MovieListTableViewController, uncomment the prepareForSegue code. Remember to grab the destinationViewController and cast it as the MovieDetailViewController. Then transfer the needed movie information over to the MovieDetailViewController. (we have done this before with prepareForSegue. This time its a bit trickier because you have to figure out which movie the user tapped on)
+
+6) In the MovieDetailViewController, in viewDidLoad, take the information that was given to you during prepareForSegue and populate the 3 UILabels and the 1 UIImageView
+
+7) Run the app, you should be able to tap on a movie and see its details, then go back to the list and tap on a different movie and see that different movie's details.
