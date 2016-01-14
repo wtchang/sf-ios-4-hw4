@@ -1,8 +1,10 @@
-HW4 - Movie Detail View Controller
+# HW4 - Movie Detail View Controller
+
+## Part 1 - Movie Detail View Controller
 
 You're going to recycle the random movie view controller and its outlets into a detail movie view controller. Then in prepareForSegue of the MovieListTableViewController, you're going to give the MovieDetailViewController the information it needs. The prepareForSegue part of this is intentionally left a little vague. I want to see what kind of creative ways you find out which movie was tapped on and how you transfer that information to the MovieDetailViewController.
 
-It needs at least the following information:
+### It needs at least the following information:
 
 var titleString: String?
 var directorString: String?
@@ -11,7 +13,7 @@ var moviePosterURL: NSURL?
 
 Then once the detail view controller has that information, it can populate its IBOutlets with that data in viewDidLoad.
 
-A rough outline of the steps you should follow are:
+### Rough Steps Needed:
 
 1) Rename the RandomMovieViewController.swift file to MovieDetailViewController.swift. Also remember to rename the class to MovieDetailViewController
 
@@ -28,3 +30,33 @@ A rough outline of the steps you should follow are:
 6) In the MovieDetailViewController, in viewDidLoad, take the information that was given to you during prepareForSegue and populate the 3 UILabels and the 1 UIImageView
 
 7) Run the app, you should be able to tap on a movie and see its details, then go back to the list and tap on a different movie and see that different movie's details.
+
+## Part 2 - Movie Poster Scroll View Controller
+
+Make it so when the user taps on the movie poster in the MovieDetailViewController, they are segued to a new view controller. This new view controller will place the movie poster in a scroll view and allow the user to scroll around and zoom in / out of the movie poster.
+
+Don’t worry if the poster is pixelated, thats OK.
+
+### Rough Steps Needed
+
+1) Place a button over top of the movie poster image view in the MoviePosterDetailViewController. Make the button segue to a new view controller.
+
+2) In the new view controller place a ScrollView and give it an outlet to the view controller
+
+3) In viewDidLoad, use the method we used in class to make an image view and place it into the scroll view
+
+4) make sure you follow the appropriate steps so the scroll view can zoom and pan.
+
+## Part 3 (Optional Bonus) - Configure Autolayout so all three view controllers work in landscape and portrait
+
+### Rough Steps Needed
+
+1) Constrain the tableview so it stretches to the edges of the main view.
+
+2) set up the constraints in the prototype cell similar to how we did in class.
+
+3) In the movie detail view controller, configure the constraints so when you rotate, things readjust accordingly
+
+4) In the movie poster scroll view controller, configure the constraints so the scroll view is always pinned to the edges of the main view.
+
+
