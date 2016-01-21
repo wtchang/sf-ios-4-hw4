@@ -22,11 +22,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="137" id="MZC-ni-Z60" customClass="MovieTableViewCell" customModule="__" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="137" id="MZC-ni-Z60" customClass="MovieTableViewCell" customModule="__" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="137"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MZC-ni-Z60" id="V6l-3R-MI6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="136"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SamplePoster" translatesAutoresizingMaskIntoConstraints="NO" id="vGk-5L-u7c">
@@ -36,7 +36,7 @@
                                                         <constraint firstAttribute="width" secondItem="vGk-5L-u7c" secondAttribute="height" multiplier="0.675:1" id="u9X-qy-5Pz"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5M-nW-4yM">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" layoutMarginsFollowReadableWidth="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5M-nW-4yM">
                                                     <rect key="frame" x="101" y="59" width="266" height="69"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="69" id="ReN-C6-ZUE"/>
@@ -46,13 +46,13 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Martian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="li2-5V-J5l">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The Martian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="li2-5V-J5l">
                                                     <rect key="frame" x="101" y="8" width="266" height="20"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Ridley Scott" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDK-He-nYN">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" misplaced="YES" text="Ridley Scott" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDK-He-nYN">
                                                     <rect key="frame" x="101" y="36" width="266" height="17"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -78,7 +78,7 @@
                                             <outlet property="directorLabel" destination="TDK-He-nYN" id="3ay-7c-ahX"/>
                                             <outlet property="posterImageView" destination="vGk-5L-u7c" id="wfd-vN-aS3"/>
                                             <outlet property="titleLabel" destination="li2-5V-J5l" id="dOa-uc-AUP"/>
-                                            <segue destination="UmB-MY-kVW" kind="show" identifier="showDetail" action="showDetailViewController:sender:" id="A45-eu-hqD"/>
+                                            <segue destination="UmB-MY-kVW" kind="show" identifier="showDetail" id="A45-eu-hqD"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
